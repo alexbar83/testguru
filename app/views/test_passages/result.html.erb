@@ -1,0 +1,6 @@
+<h1 class="<%= set_result_color(@test_passage) %>">Test
+  '<%= @test_passage.test.title %>'
+   <%= show_result_message(@test_passage)%></h1>
+
+<h2> <%= link_to 'List all tests', tests_path %></h2> 
+ 
