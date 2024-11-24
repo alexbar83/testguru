@@ -11,8 +11,10 @@
 
   <body>
     <%= render 'admin/header' %>
-    <%= flash_messages %>
-    <%= yield %>
+    <div class="container">
+      <%= flash_messages %>
+      <%= yield %>
+    </div>
     <%= render 'shared/footer' %>
   </body>
 </html> 
