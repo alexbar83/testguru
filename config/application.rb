@@ -12,6 +12,7 @@ module Gura
     config.load_defaults 6.1
 
     config.i18n.default_locale = :ru
+    config.autoload_paths << "#{Rails.root}/lib/clients"
 
     # Configuration for the application, engines, and railties goes here.
     #
