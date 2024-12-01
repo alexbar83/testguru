@@ -1,1 +1,11 @@
 @import "bootstrap";
+@import "typography/icons";
+@import "global";
+
+.container {
+  height: 91vh;
+}
+
+a {
+  text-decoration-line: none;
+}
