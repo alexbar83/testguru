@@ -32,6 +32,14 @@ class Admin::TestsController < Admin::BaseController
     end
   end
 
+  def update_inline
+    if @test.update(test_params)
+      redirect_to admin_tests_path(@test), notice: t('admin.updated', resource: @test.model_name.human)
+    else
+      render :index
+    end
+  end
+
   def destroy
     @test.destroy
 
