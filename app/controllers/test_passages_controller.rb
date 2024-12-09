@@ -10,6 +10,8 @@ class TestPassagesController < ApplicationController
     @test_passage.accept!(params[:answer_ids])
 
     if @test_passage.completed?
+      awarded_badges! if @test_passage.successfully_completed?
+
       TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
     else
@@ -37,5 +39,15 @@ class TestPassagesController < ApplicationController
 
   def set_test_passage
     @test_passage = TestPassage.find(params[:id])
+  end
+
+  def create_gist!(gist_url)
+    current_user.gists.create(question: @test_passage.current_question, url: gist_url)
+  end
+
+  def awarded_badges!
+    badge_service = BadgeService.new(@test_passage)
+    badge_service.awarded_badges!
+    current_user.badges.push(badge_service.badges)
   end
 end

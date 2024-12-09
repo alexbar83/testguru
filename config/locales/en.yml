@@ -20,6 +20,8 @@ en:
       hello: "Hello"
       guru: "Guru"
       logout: "Logout"
+      gists: "Gists"
+      badges: "Badges"
 
     tests:
       index:
@@ -49,7 +51,7 @@ en:
         edit: "Edit"
         delete: "Delete"
         delete_confirmation: "Are you sure?"
-        start: "Start" 
+        start: "Start"
       form_inline:
         submit: "OK"
 
@@ -91,7 +93,16 @@ en:
         delete: "Delete"
         delete_confirmation: "Are you sure?"
 
-  test_passages:
+    gists:
+      index:
+        header: "Users Gists"
+        question: "Question"
+        url: "Hash"
+        user: "User email"
+      gist:
+        url: "Gist url"
+
+  test_passings:
     show:
       header: "Passing %{test_title} test"
       questions: "Question %{current_question} of %{questions_count}"
@@ -101,6 +112,46 @@ en:
       success: "successfully complete"
       failed: "failed"
       back: "Tests list"
+    gist:
+      success: "Gist successfully saved. %{url}"
+      failed: "Error occurred while saving the gist"
+
+  gist_description: "%{test_title} questions from TestGuru"
+
+  feedbacks:
+    new:
+      header: "Feedback form"
+      back: "Back"
+    create:
+      success: "Email successfully sent"
+      failed: "Error sending email"
+  
+  badges:
+    index:
+      header: "Your badges"
+      available: "Available badges"
+      header: "Available badges"
+      title: "Title"
+      image_path: "Image"
+      assigment_rule: "Assigment rule"
+      actions: "Actions"
+      new_badge: "New badge"
+    show:
+      title: "Badge %{badge_title}"
+      assigment_rule: "Rule"
+      edit: "Edit"
+      back: "Back"
+    new:
+      header: "New badge"
+      back: "Back"
+    edit:
+      header: "Edit %{title}"
+      back: "Back"
+    badge:
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
+      delete_confirmation: "Are you sure?"
 
   helpers:
     submit:
@@ -113,6 +164,8 @@ en:
       answer:
         create: "Add answer"
         update: "Update answer"
+      feedback:
+        create: "Send"
     label:
       test:
         title: "Title"
@@ -123,6 +176,9 @@ en:
       answer:
         body: "Body"
         correct: "Correct"
+      feedback:
+        title: "Subject"
+        body: "Message"
     select:
       prompt: "Select"
 
@@ -132,6 +188,7 @@ en:
         one: "%{count} error detected"
         other: "%{count} errors detected"
     header:
+      badges: "Badges"
       hello: "Hello"
       guru: "Guru"
       signup: "Sign Up"
@@ -155,4 +212,5 @@ en:
     easy: "easy"
     medium: "medium"
     hard: "hard"
-    hero: "hero"
+    hero: "hero" 
+    
