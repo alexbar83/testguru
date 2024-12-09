@@ -6,6 +6,7 @@ ru:
       question: "Вопрос"
       answer: "Ответ"
       user: "Пользователь"
+      badge: "Награда"
 
     attributes:
       test:
